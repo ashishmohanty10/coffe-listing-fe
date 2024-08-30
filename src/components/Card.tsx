@@ -5,7 +5,7 @@ import StarNoFill from "/public/Star.svg";
 
 export const Card = ({ data }: { data: Coffee[] }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-fit h-full  items-center justify-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-[290px] h-fit md:w-fit   items-center justify-center ">
       {data.map((coffee) => (
         <div>
           <div className="relative">
@@ -14,7 +14,7 @@ export const Card = ({ data }: { data: Coffee[] }) => {
               alt="coffee type"
               width={150}
               height={150}
-              className="w-full rounded-xl mb-2"
+              className="w-full rounded-xl mb-2 object-cover"
             />
 
             {coffee.popular && (
@@ -24,6 +24,7 @@ export const Card = ({ data }: { data: Coffee[] }) => {
             )}
           </div>
 
+          {/* name and price */}
           <div className="flex items-start justify-between mb-1">
             <div>
               <p className="text-base font-semibold text-[#FEF7EE]">
@@ -35,6 +36,7 @@ export const Card = ({ data }: { data: Coffee[] }) => {
             </div>
           </div>
 
+          {/* rating and available  */}
           <div className="flex items-center justify-between space-x-2">
             <div className="flex items-center gap-1">
               <div className="flex items-center ">

@@ -42,8 +42,8 @@ const page = () => {
   }, [showAll, data]);
 
   return (
-    <div className="w-full min-h-screen bg-[#111315] relative">
-      <div className="w-full">
+    <div className="w-full min-h-screen bg-[#111315] flex items-center justify-center">
+      <div className="w-full absolute top-0 left-0">
         <Image
           src={BgCafe}
           className="w-full h-[30vh] object-cover"
@@ -52,7 +52,7 @@ const page = () => {
         />
       </div>
 
-      <div className="absolute h-fit w-fit bg-[#1B1D1F] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6 md:p-12 rounded-lg">
+      <div className="bg-[#1B1D1F] p-6 md:p-12 rounded-lg z-50 mt-32">
         <h2 className="text-[#FEF7EE] text-[32px] text-center font-bold">
           Our Collection
         </h2>
@@ -64,7 +64,7 @@ const page = () => {
             batches and shipped fresh weekly.
           </p>
 
-          <div className="space-x-6 my-4">
+          <div className="flex items-center space-x-6 my-4">
             <Button
               onClick={() => setShowAll(true)}
               className={`px-4 py-2 rounded-lg text-[#FEF7EE] text-sm font-semibold ${
