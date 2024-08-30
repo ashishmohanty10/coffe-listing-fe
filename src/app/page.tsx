@@ -7,7 +7,7 @@ import { Coffee } from "@/types";
 import { Card } from "@/components/Card";
 import Button from "@/components/Button";
 
-export default function Home() {
+export default function Main() {
   const [data, setData] = useState<Coffee[]>([]);
   const [filterData, setFilterData] = useState<Coffee[]>([]);
   const [showAll, setShowAll] = useState<boolean>(true);
