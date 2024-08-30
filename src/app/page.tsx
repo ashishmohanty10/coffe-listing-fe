@@ -7,10 +7,10 @@ import { Coffee } from "@/types";
 import { Card } from "@/components/Card";
 import Button from "@/components/Button";
 
-const page = () => {
+export default function Home() {
   const [data, setData] = useState<Coffee[]>([]);
   const [filterData, setFilterData] = useState<Coffee[]>([]);
-  const [showAll, setShowAll] = useState(true);
+  const [showAll, setShowAll] = useState<boolean>(true);
 
   const handleFilterData = () => {
     if (showAll) {
@@ -89,6 +89,4 @@ const page = () => {
       </div>
     </div>
   );
-};
-
-export default page;
+}
