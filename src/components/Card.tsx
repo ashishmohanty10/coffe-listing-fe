@@ -6,8 +6,8 @@ import StarNoFill from "/public/Star.svg";
 export const Card = ({ data }: { data: Coffee[] }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-[290px] h-fit md:w-fit   items-center justify-center ">
-      {data.map((coffee) => (
-        <div>
+      {data.map((coffee, idx) => (
+        <div key={idx}>
           <div className="relative">
             <Image
               src={coffee.image}
