@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import BgCafe from "/public/bg-cafe.jpg";
+import Vector from "/public/vector.svg";
 import { Coffee } from "@/types";
 import { Card } from "@/components/Card";
 import Button from "@/components/Button";
@@ -52,7 +53,12 @@ export default function Main() {
         />
       </div>
 
-      <div className="bg-[#1B1D1F] p-6 md:p-12 rounded-lg z-50 mt-32">
+      <div className="bg-[#1B1D1F] p-6 md:p-12 rounded-lg z-50 mt-32 relative overflow-hidden">
+        <Image
+          src={Vector}
+          alt="Vector"
+          className="absolute top-0 -right-16 md:right-16 xl:right-56  -z-20"
+        />
         <h2 className="text-[#FEF7EE] text-[32px] text-center font-bold">
           Our Collection
         </h2>
